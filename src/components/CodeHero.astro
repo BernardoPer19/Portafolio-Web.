@@ -1,0 +1,39 @@
+---
+const llaveDerecha = "{";
+const llaveIzquierda = "}";
+---
+
+<!-- AgustinFrontend.tsx -->
+<div class="group relative max-w-2xl rounded-xl border border-[#3e3e3e] bg-[#1e1e1e] p-4 shadow-lg transition duration-300 hover:shadow-[0_0_30px_#7c3aed] hover:scale-[1.02]">
+  <!-- Header estilo VS Code -->
+  <div class="flex items-center justify-between px-2 py-1">
+    <div class="flex items-center space-x-2">
+      <span class="h-3 w-3 rounded-full bg-red-500"></span>
+      <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+      <span class="h-3 w-3 rounded-full bg-green-500"></span>
+    </div>
+    <span class="text-xs text-gray-400 font-mono">AgustinFrontend.tsx</span>
+  </div>
+
+  <!-- Contenido de código -->
+  <pre class="mt-4 text-sm text-white font-mono leading-relaxed">
+<span class="text-gray-600">1</span> <span class="text-pink-500">import</span> <span class="text-yellow-300">{ llaveDerecha }</span> React, Zustand, QueryClient <span class="text-yellow-300">{ llaveIzquierda }</span> <span class="text-pink-500">from</span> <span class="text-orange-400">"frontend-stack.tsx"</span>
+<span class="text-gray-600">2</span> 
+<span class="text-gray-600">3</span> <span class="text-pink-500">interface</span> <span class="text-blue-400">Developer</span> <span class="text-yellow-300">{llaveDerecha}</span>
+<span class="text-gray-600">4</span>   name: <span class="text-cyan-400">string</span>
+<span class="text-gray-600">5</span>   role: <span class="text-cyan-400">string</span>
+<span class="text-gray-600">6</span>   stack: <span class="text-cyan-400">string[]</span>
+<span class="text-gray-600">7</span> <span class="text-yellow-300">{llaveIzquierda}</span>
+<span class="text-gray-600">8</span> 
+<span class="text-gray-600">9</span> <span class="text-pink-500">const</span> <span class="text-blue-400">Agustin</span>: <span class="text-blue-400">Developer</span> <span class="text-white">=</span> <span class="text-yellow-300">{llaveDerecha}</span>
+<span class="text-gray-600">10</span>   name: <span class="text-green-400">{</span><span class="text-orange-400">"Agustín B. Peredo"</span><span class="text-green-400">}</span>,
+<span class="text-gray-600">11</span>   role: <span class="text-green-400">{</span><span class="text-orange-400">"Frontend Developer"</span><span class="text-green-400">}</span>,
+<span class="text-gray-600">12</span>   stack: <span class="text-green-400">{</span>[<span class="text-orange-400">"React 19"</span>, <span class="text-orange-400">"NodeJS"</span>, <span class="text-orange-400">"PostgreSQL"</span>]<span class="text-green-400">}</span>
+<span class="text-gray-600">13</span> <span class="text-yellow-300">}</span>
+<span class="text-gray-600">14</span> 
+<span class="text-gray-600">15</span> <span class="text-pink-500">export default</span> Agustin
+  </pre>
+
+  <!-- Border animado -->
+  <div class="pointer-events-none absolute inset-0 rounded-xl border border-transparent group-hover:border-[#7c3aed] transition duration-300"></div>
+</div>

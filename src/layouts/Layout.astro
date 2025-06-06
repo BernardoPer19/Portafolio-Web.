@@ -1,0 +1,90 @@
+---
+import Footer from "../components/Footer.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Agustín Bernardo Peredo Rodriguez | Frontend Developer",
+  description = "Frontend Desarrollador freelance con más de 1 año de experiencia en la creación de aplicaciones full-stack sólidas, escalables e interactivas.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark-300 text-white min-h-screen">
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-dark-300 bg-[radial-gradient(#2c2c3c_1px,transparent_1px)] [background-size:20px_20px]"
+    >
+    </div>
+    <slot />
+    <Footer />
+  </body>
+
+  <style is:global>
+    html {
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .animate-on-scroll {
+      @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    }
+
+    .animate-on-scroll.show {
+      @apply opacity-100 translate-y-0;
+    }
+  </style>
+
+  <script>
+    // Animation on scroll
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+      elements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</html>

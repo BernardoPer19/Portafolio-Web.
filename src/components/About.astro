@@ -1,0 +1,83 @@
+---
+import WebSite from "./icons/LocationIcon.astro";
+import PhoneIcon from "./icons/PhoneIcon.astro";
+import Location from "../components/icons/Location.astro";
+import EmailIcon from "./icons/EmailIcon.astro";
+---
+
+<section id="about" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 min-h-[70vh]">
+    <div class="animate-on-scroll">
+      <div class="flex items-center gap-2 text-primary-400 mb-4">
+        <div class="h-px w-12 bg-primary-400"></div>
+        <span class="font-mono text-sm tracking-wider">SOBRE MÍ</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+        Conoce más <span class="text-primary-400">sobre mí</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-on-scroll">
+        <div
+          class="aspect-square w-full max-w-md mx-auto rounded-2xl overflow-hidden relative"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-primary-600/20 to-transparent z-10"
+          >
+          </div>
+          <div
+            class="absolute inset-0 border border-primary-500/20 rounded-2xl z-20"
+          >
+          </div>
+          <img
+            src="https://images.pexels.com/photos/4064826/pexels-photo-4064826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Agustín Bernardo Peredo Rodriguez"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="animate-on-scroll delay-300">
+        <h3 class="text-xl font-semibold mb-4">
+          Frontend Developer de Cochabambaz, Bolivia
+        </h3>
+
+        <p class="text-zinc-300 mb-6 text-balance">
+          Soy un desarrollador web Full-Stack apasionado por desarrollo y la
+          programacion de web. Con más de 1 año de experiencia en el desarrollo
+          de aplicaciones web, me especializo en construir interfaces de usuario
+          atractivas y funcionales con un codigo limpio y mantenible
+          <br /><br />
+          Mi enfoque se centra en el desarrollo profesional, priorizando el rendimiento,
+          la accesibilidad y la experiencia del usuario. Constantemente me mantengo
+          actualizado con las últimas tecnologías y tendencias en el mundo del desarrollo
+          web.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 text-sm text-zinc-300">
+          <div class="flex items-center gap-2">
+            <PhoneIcon />
+            <span>+591 64854829</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <WebSite />
+            <span>www.agustin.dev</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <Location />
+            <span>La Paz, Bolivia</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <EmailIcon />
+            <span>ejemplo@email.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

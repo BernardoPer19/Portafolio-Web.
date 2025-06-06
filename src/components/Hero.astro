@@ -1,0 +1,86 @@
+---
+import CodeHero from "./CodeHero.astro";
+import EmailIcon from "./icons/EmailIconBig.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+---
+
+<section id="home" class="min-h-[90vh] flex items-center pt-16 pb-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full flex gap-10 justify-center items-center">
+    <div class="flex flex-col gap-4 max-w-3xl">
+      <div
+        class="flex items-center gap-2 text-primary-400 animate-fade-right animate-once animate-duration-[800ms] animate-delay-300"
+      >
+        <div class="h-px w-12 bg-primary-400"></div>
+        <span class="font-mono text-sm tracking-wider">PORTFOLIO</span>
+      </div>
+
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight animate-fade-right animate-once animate-duration-[800ms] animate-delay-500"
+      >
+        Agustín Bernardo <br />
+        <span class="text-primary-400">Peredo Rodriguez</span>
+      </h1>
+
+      <p
+        class="text-lg sm:text-xl text-zinc-400 mt-4 max-w-2xl animate-fade-right animate-once animate-duration-[800ms] animate-delay-700"
+      >
+        Frontend — Desarrollador freelance con más de 1 año de experiencia en la
+        creación de aplicaciones full-stack sólidas, escalables e interactivas.
+      </p>
+
+      <div
+        class="flex gap-4 mt-8 animate-fade-right animate-once animate-duration-[800ms] animate-delay-1000"
+      >
+        <a
+          href="#"
+          class="px-6 py-3 border border-zinc-700 rounded-lg text-white hover:bg-white/5 transition-colors flex items-center gap-2"
+          download
+        >
+          <span>Descargar CV</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+            ><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path
+              d="M19 21H5"></path></svg
+          >
+        </a>
+
+        <div class="flex flex-wrap gap-3 justify-center items-center">
+          <GitHubIcon />
+          <EmailIcon />
+          <LinkedInIcon />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-20 left-1/2 transform -translate-x-1/2 hidden md:block animate-bounce"
+    >
+      <a href="#about" class="text-zinc-300 hover:text-white transition-colors">
+        <span class="sr-only">Scroll hacia abajo</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-8 h-8"><path d="m6 9 6 6 6-6"></path></svg
+        >
+      </a>
+    </div>
+    <CodeHero />
+  </div>
+</section>
