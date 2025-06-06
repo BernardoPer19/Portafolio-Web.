@@ -1,0 +1,17 @@
+---
+const { features } = Astro.props;
+---
+<div>
+  <h2 class="text-2xl font-bold mb-6">Funcionalidades implementadas</h2>
+  <ul>
+    {features?.length > 0 ? (
+      features.map((feature) => (
+        <li class="flex items-center gap-2">
+          <span style="color: purple; font-weight: bold;">✔</span> {feature}
+        </li>
+      ))
+    ) : (
+      <li>No hay características detalladas disponibles.</li>
+    )}
+  </ul>
+</div>

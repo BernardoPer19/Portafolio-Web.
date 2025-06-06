@@ -1,0 +1,11 @@
+---
+const { project } = Astro.props;
+---
+
+<div class="relative rounded-xl overflow-hidden aspect-video">
+  <img
+    src={project.image}
+    alt={project.title}
+    class="w-full h-full object-cover"
+  />
+</div>
