@@ -6,7 +6,9 @@ import LinkedInIcon from "../icons/LinkedInIcon.astro";
 ---
 
 <section id="home" class="min-h-[90vh] flex items-center pt-16 pb-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full flex gap-10 justify-center items-center">
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full flex gap-10 justify-center items-center"
+  >
     <div class="flex flex-col gap-4 max-w-3xl">
       <div
         class="flex items-center gap-2 text-primary-400 animate-fade-right animate-once animate-duration-[800ms] animate-delay-300"
@@ -54,10 +56,18 @@ import LinkedInIcon from "../icons/LinkedInIcon.astro";
           >
         </a>
 
-        <div class="flex flex-wrap gap-3 justify-center items-center ">
-          <GitHubIcon />
-          <EmailIcon />
-          <LinkedInIcon />
+        <div class="flex flex-wrap gap-3 justify-center items-center">
+          <a href="https://github.com/BernardoPer19">
+            <GitHubIcon />
+          </a>
+          <a
+            href="mailto:tucorreo@ejemplo.com?subject=Asunto del correo&body=Cuerpo del correo"
+            ><EmailIcon /></a
+          >
+          <a
+            href="https://www.linkedin.com/in/bernardo-peredo-50a1552a0/?originalSubdomain=bo"
+            ><LinkedInIcon /></a
+          >
         </div>
       </div>
     </div>

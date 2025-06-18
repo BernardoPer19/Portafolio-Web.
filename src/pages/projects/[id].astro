@@ -39,12 +39,16 @@ if (!project) {
         <ProjectHeader project={project} />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div class="md:col-span-2">
-            <div class="relative rounded-xl overflow-hidden aspect-video">
-              <img
-                src={project.image}
-                alt={project.title}
+            <div class="relative rounded-xl overflow-hidden aspect-video group">
+              <video
+                src={project.videoUrl}
                 class="w-full h-full object-cover"
-              />
+                controls
+                controlslist="nodownload"
+                preload="metadata"
+              >
+                Tu navegador no soporta el video.
+              </video>
             </div>
           </div>
           <ProjectInfoCard project={project} />
