@@ -20,7 +20,7 @@ import { technologies } from "../../data/tecnologias";
       <div class="marquee-wrapper">
         <div class="marquee-content" aria-label="Lista de tecnologías usadas">
           {
-            technologies.concat(technologies).map((tech, index) => (
+            technologies.concat(technologies).map((tech) => (
               <div class="tech-card" role="listitem">
                 <div class={`tech-icon ${tech.color}`} title={tech.name}>
                   <Icon name={tech.icon} class="w-8 h-8" aria-hidden="true" />

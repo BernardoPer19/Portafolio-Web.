@@ -101,47 +101,48 @@ import { projects } from "../../data/projects";
 </section>
 
 <style>
- /* Botón activo con transición */
-.filter-btn {
-  @apply px-4 py-2 rounded-lg text-sm font-medium text-zinc-400 bg-dark-100 border border-zinc-800 transition-all hover:border-primary-500/50 hover:text-white;
-}
+  /* Botón activo con transición */
+  .filter-btn {
+    @apply px-4 py-2 rounded-lg text-sm font-medium text-zinc-400 bg-dark-100 border border-zinc-800 transition-all hover:border-primary-500/50 hover:text-white;
+  }
 
-.filter-btn.active {
-  @apply bg-primary-500/10 text-primary-400 border-primary-500/50;
-}
+  .filter-btn.active {
+    @apply bg-primary-500/10 text-primary-400 border-primary-500/50;
+  }
 
-/* Tarjetas con transición */
-.project-card {
-  @apply opacity-100 transition-all duration-500 ease-in-out;
-}
+  /* Tarjetas con transición */
+  .project-card {
+    @apply opacity-100 transition-all duration-500 ease-in-out;
+  }
 
-.project-card.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.98);
-}
+  .project-card.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.98);
+  }
 
-/* Destacado con glow sutil */
-.project-card .bg-dark-300 {
-  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
-}
+  /* Destacado con glow sutil */
+  .project-card .bg-dark-300 {
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+  }
 
-/* Hover más visual en imagen */
-.project-card:hover .group > .relative > .bg-black\/70 {
-  background-color: rgba(0, 0, 0, 0.6);
-}
+  /* Hover más visual en imagen */
+  .project-card:hover .group > .relative > .bg-black\/70 {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
-/* Animación en scroll base */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.animate-on-scroll.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+  /* Animación en scroll base */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+  }
+  .animate-on-scroll.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
 <script>
@@ -149,18 +150,22 @@ import { projects } from "../../data/projects";
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".project-card");
 
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.getAttribute("data-filter");
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Quitar clase active de todos los botones
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        // Poner clase active al botón clickeado
+        btn.classList.add("active");
 
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
+        const filter = btn.getAttribute("data-filter");
 
         projectCards.forEach((card) => {
-          if (filter === "all" || card.getAttribute("data-type") === filter) {
-            card.style.display = "block";
+          if (filter === "all") {
+            card.style.display = "block"; // mostrar todo
           } else {
-            card.style.display = "none";
+            // Mostrar solo los que coinciden con el data-type
+            card.style.display =
+              card.getAttribute("data-type") === filter ? "block" : "none";
           }
         });
       });
