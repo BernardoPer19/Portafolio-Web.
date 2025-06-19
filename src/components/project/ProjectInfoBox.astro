@@ -68,11 +68,13 @@ const {
           <path d="M15 3h6v6"></path>
           <path d="m10 14 11-11"></path>
         </svg>
-        <span
-          >{
-            !project.repoUrl ? "Ver demo en vivo" : "Aún no esta en producción"
-          }</span
-        >
+        <span>
+          {
+            project.demoUrl && project.demoUrl.trim() !== ""
+              ? "Ver demo en vivo"
+              : "Aún no está en producción"
+          }
+        </span>
       </a>
       <a
         href={project.repoUrl ? project.repoUrl : "An no esta en producción"}

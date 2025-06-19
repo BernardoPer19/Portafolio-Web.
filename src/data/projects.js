@@ -139,7 +139,7 @@ export const projects = [
       "/img/workShow7.webp",
       "/img/workShow8.webp",
     ],
-    demoUrl: "",
+    demoUrl: undefined,
     repoUrl: "https://github.com/BernardoPer19/WorkShowApp",
     features: [
       "Creación y edición de proyectos",
