@@ -31,7 +31,6 @@ import { projects } from "../../data/projects";
             class={`project-card animate-on-scroll delay-${index * 100} ${isLarge ? "col-span-2" : ""}`}
             data-type={project.type}
             style="height: 20rem;"
-            key={project.id}
           >
             <div class="group relative h-full overflow-hidden rounded-xl bg-dark-100 border border-zinc-800 transition-all hover:border-primary-500/50">
               {project.featured && (
