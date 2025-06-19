@@ -18,7 +18,7 @@ const {
       </h3>
       <div class="flex flex-wrap gap-2">
         {
-          technologies.map((tech) => (
+          technologies.map((tech: any) => (
             <span class="px-2 py-1 text-xs font-medium bg-dark-200 text-primary-400 rounded-full">
               {tech}
             </span>
@@ -68,10 +68,14 @@ const {
           <path d="M15 3h6v6"></path>
           <path d="m10 14 11-11"></path>
         </svg>
-        <span>Ver demo en vivo</span>
+        <span
+          >{
+            !project.repoUrl ? "Ver demo en vivo" : "Aún no esta en producción"
+          }</span
+        >
       </a>
       <a
-        href={project.repoUrl}
+        href={project.repoUrl ? project.repoUrl : "An no esta en producción"}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 mt-3 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors"

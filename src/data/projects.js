@@ -29,8 +29,8 @@ export const projects = [
       "/img/cap30.webp",
       "/img/cap31.webp",
     ],
-    demoUrl: "https://demo-ecommerce.com",
-    repoUrl: "https://github.com/agustin/ecommerce-dashboard",
+    demoUrl: "https://caffeteria-full-stack.vercel.app/",
+    repoUrl: "https://github.com/BernardoPer19/Caffeteria-FullStack",
     features: [
       "Gestión de productos, pedidos, clientes y empleados",
       "Filtrado y paginación de productos",
@@ -46,8 +46,8 @@ export const projects = [
     description: "Galería multimedia interactiva con favoritos y descargas.",
     longDescription:
       "MediaGallery es una aplicación full-stack que permite a los usuarios explorar, guardar, compartir y descargar imágenes de alta calidad. Incluye autenticación segura, guardado de favoritos y una experiencia visual moderna. Usa una API REST personalizada y React Query para un manejo eficiente del estado asíncrono.",
-    image: "img/cap33.webp",
-    videoUrl: "https://youtu.be/demo-media-gallery",
+    image: "/img/cap33.webp",
+    videoUrl: "/public/videos/MediaGallery.mp4",
     technologies: [
       "ReactJS",
       "ReactQuery",
@@ -69,7 +69,7 @@ export const projects = [
       "/img/MediaGalleryApp3.webp",
       "/img/MediaGalleryApp4.webp",
     ],
-    demoUrl: "https://media-gallery-demo.com",
+    demoUrl: "https://media-galery-app.vercel.app/",
     repoUrl: "https://github.com/BernardoPer19/MediaGaleryApp",
     features: [
       "Guardar imágenes favoritas en perfil",
@@ -82,12 +82,12 @@ export const projects = [
 
   {
     id: 4,
-    title: "NewsRadar",
+    title: "Web de noticias",
     description: "Sitio de noticias actualizadas con filtros inteligentes.",
     longDescription:
       "NewsRadar es un portal de noticias responsive construido con NextJS, que consume una API externa para mostrar noticias en tiempo real. Los usuarios pueden buscar por tema, guardar sus artículos favoritos en localStorage y disfrutar una experiencia visual moderna con modo oscuro.",
     image: "img/cap22.webp",
-    videoUrl: "c/videos/newVideo.mp4",
+    videoUrl: "/videos/newVideo.mp4",
 
     technologies: ["React", "NextJS", "JavaScript", "Tailwind", "Axios", "SRR"],
     type: "Frontend",
@@ -139,8 +139,8 @@ export const projects = [
       "/img/workShow7.webp",
       "/img/workShow8.webp",
     ],
-    demoUrl: "https://workshow-demo.com",
-    repoUrl: "https://github.com/agustin/workshow-social",
+    demoUrl: "",
+    repoUrl: "https://github.com/BernardoPer19/WorkShowApp",
     features: [
       "Creación y edición de proyectos",
       "Guardar favoritos y seguir usuarios",
@@ -149,63 +149,63 @@ export const projects = [
       "Autenticación con JWT y perfiles personalizados",
     ],
   },
-  {
-    id: 5,
-    title: "CineScope",
-    description: "Buscador de películas con detalles e interfaz elegante.",
-    longDescription:
-      "CineScope permite explorar películas usando la API de TMDB. Los usuarios pueden buscar por nombre, ver detalles, trailers e información relacionada. Incluye modo oscuro, navegación SPA y animaciones sutiles.",
-    image: "https://images.pexels.com/photos/7991312/pexels-photo-7991312.jpeg",
-    videoUrl: "https://youtu.be/demo-cinescope",
+  // {
+  //   id: 5,
+  //   title: "CineScope",
+  //   description: "Buscador de películas con detalles e interfaz elegante.",
+  //   longDescription:
+  //     "CineScope permite explorar películas usando la API de TMDB. Los usuarios pueden buscar por nombre, ver detalles, trailers e información relacionada. Incluye modo oscuro, navegación SPA y animaciones sutiles.",
+  //   image: "https://images.pexels.com/photos/7991312/pexels-photo-7991312.jpeg",
+  //   videoUrl: "https://youtu.be/demo-cinescope",
 
-    technologies: [
-      "React",
-      "Axios",
-      "React Router",
-      "TailwindCSS",
-      "Framer Motion",
-    ],
-    type: "Frontend",
-    duration: "2 semanas",
-    collaborative: false,
-    featured: false,
-    gallery: [
-      "https://images.pexels.com/photos/7991312/pexels-photo-7991312.jpeg",
-      "https://images.pexels.com/photos/7991372/pexels-photo-7991372.jpeg",
-    ],
-    demoUrl: "https://cine-scope-demo.com",
-    repoUrl: "https://github.com/agustin/cine-scope",
-    features: [
-      "Búsqueda por título",
-      "Modo oscuro persistente",
-      "Detalles de películas con trailers",
-      "Animaciones suaves y sliders",
-      "",
-    ],
-  },
-  {
-    id: 6,
-    title: "Ecommerce Simulada",
-    description: "Tienda online con filtros, SSR, RSC y diseño moderno.",
-    longDescription:
-      "Ecommerce Pro es una tienda en línea construida con lo último de Next.js. Incluye filtrado dinámico por categoría, color y precio, renderizado del lado del servidor (SSR), React Server Components (RSC), paginación, carrito persistente, autenticación y panel de administración.",
-    image: "img/cap8.webp",
-    videoUrl: "https://youtu.be/demo-ecommerce-pro",
+  //   technologies: [
+  //     "React",
+  //     "Axios",
+  //     "React Router",
+  //     "TailwindCSS",
+  //     "Framer Motion",
+  //   ],
+  //   type: "Frontend",
+  //   duration: "2 semanas",
+  //   collaborative: false,
+  //   featured: false,
+  //   gallery: [
+  //     "https://images.pexels.com/photos/7991312/pexels-photo-7991312.jpeg",
+  //     "https://images.pexels.com/photos/7991372/pexels-photo-7991372.jpeg",
+  //   ],
+  //   demoUrl: "https://cine-scope-demo.com",
+  //   repoUrl: "https://github.com/agustin/cine-scope",
+  //   features: [
+  //     "Búsqueda por título",
+  //     "Modo oscuro persistente",
+  //     "Detalles de películas con trailers",
+  //     "Animaciones suaves y sliders",
+  //     "",
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   title: "Ecommerce Simulada",
+  //   description: "Tienda online con filtros, SSR, RSC y diseño moderno.",
+  //   longDescription:
+  //     "Ecommerce Pro es una tienda en línea construida con lo último de Next.js. Incluye filtrado dinámico por categoría, color y precio, renderizado del lado del servidor (SSR), React Server Components (RSC), paginación, carrito persistente, autenticación y panel de administración.",
+  //   image: "img/cap8.webp",
+  //   videoUrl: "https://youtu.be/demo-ecommerce-pro",
 
-    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
-    type: "Frontend",
-    duration: "2 semanas",
-    collaborative: false,
-    featured: true,
-    gallery: ["/img/cap6.webp", "/img/cap7.webp", "/img/cap8.webp"],
-    demoUrl: "https://ecommerce-pro-demo.com",
-    repoUrl: "https://github.com/agustin/ecommerce-pro",
-    features: [
-      "Filtrado por categoría, alfabetamente y precio",
-      "SSR y RSC para mejor rendimiento",
-      "Carrito persistente en localStorage",
-    ],
-  },
+  //   technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+  //   type: "Frontend",
+  //   duration: "2 semanas",
+  //   collaborative: false,
+  //   featured: true,
+  //   gallery: ["/img/cap6.webp", "/img/cap7.webp", "/img/cap8.webp"],
+  //   demoUrl: "https://ecommerce-pro-demo.com",
+  //   repoUrl: "https://github.com/agustin/ecommerce-pro",
+  //   features: [
+  //     "Filtrado por categoría, alfabetamente y precio",
+  //     "SSR y RSC para mejor rendimiento",
+  //     "Carrito persistente en localStorage",
+  //   ],
+  // },
   {
     id: 7,
     title: "NovaHabitat",
@@ -219,7 +219,6 @@ export const projects = [
     type: "Frontend",
     duration: "1 semana",
     collaborative: false,
-    featured: true,
     demoUrl: "https://novahabitat.com",
     repoUrl: "https://github.com/agustin/novahabitat",
     features: [

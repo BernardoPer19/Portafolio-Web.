@@ -20,7 +20,12 @@ import EmailIcon from "../icons/EmailIcon.astro";
 
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="animate-on-scroll">
-        <form id="contact-form" class="space-y-6">
+        <form
+          id="contact-form"
+          class="space-y-6"
+          action="https://formspree.io/f/meokljzj"
+          method="POST"
+        >
           <div>
             <label
               for="name"
@@ -162,27 +167,5 @@ import EmailIcon from "../icons/EmailIcon.astro";
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const contactForm = document.getElementById("contact-form");
 
-      if (contactForm) {
-        contactForm.addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          // Get form data
-          const formData = new FormData(contactForm);
-          const formProps = Object.fromEntries(formData);
-
-          // Here you would typically send the data to your backend
-          // For now, we'll just log it
-          console.log("Form data:", formProps);
-
-          // Show success message (in a real app, this would happen after successful submission)
-          alert("¡Mensaje enviado con éxito! Te contactaré pronto.");
-          contactForm.reset();
-        });
-      }
-    });
-  </script>
 </section>
