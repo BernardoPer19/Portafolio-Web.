@@ -40,15 +40,13 @@ if (!project) {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div class="md:col-span-2">
             <div class="relative rounded-xl overflow-hidden aspect-video group">
-              <video
+              <iframe
                 src={project.videoUrl}
-                class="w-full h-full object-cover"
-                controls
-                controlslist="nodownload"
-                preload="metadata"
-              >
-                Tu navegador no soporta el video.
-              </video>
+                title="Video del proyecto"
+                class="w-full h-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
           </div>
           <ProjectInfoCard project={project} />
