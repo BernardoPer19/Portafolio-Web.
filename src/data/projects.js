@@ -95,7 +95,7 @@ export const projects = [
     collaborative: false,
     featured: false,
     gallery: ["/img/cap23.webp", "/img/cap24.webp"],
-    demoUrl: "https://news-radar-demo.com",
+    demoUrl: "https://web-noticias-nu.vercel.app/",
     repoUrl: "https://github.com/agustin/news-radar",
     features: [
       "Modo oscuro automático",
@@ -163,7 +163,7 @@ export const projects = [
     type: "Frontend",
     duration: "1 semana",
     collaborative: false,
-    demoUrl: "https://novahabitat.com",
+    demoUrl: "https://house-services-landing-page.vercel.app/",
     repoUrl: "https://github.com/agustin/novahabitat",
     features: [
       "Slider automático con propiedades destacadas",
