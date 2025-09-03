@@ -1,5 +1,21 @@
 export const experiences = [
   {
+    titleProject: "Sistema de Clinicas Dentales",
+    role: "Full-Stack Developer",
+    company: "Proyectos Independientes",
+    period: "junio 2025 - agosto 2025",
+    periodTotal: "3 meses",
+    features: [
+      "Creacion de aplicación web con NextJS + TailwindCSS con Server Actions",
+      "Implementación de diseños responsivos para diversos dispositivos.",
+      "Optimización en velocidades de carga con SSR, SSG y ISR.",
+      "Integración con Inteligencia artificial para mejorar la experiencia del usuario",
+      "DashBoard de administración para clínicas con estadísticas en tiempo real y reportes.",
+    ],
+    description:
+      "Desarrollo de una aplicación web para la gestión de clínicas dentales, incluyendo funcionalidades como gestión de citas, historial de pacientes y facturación.",
+  },
+  {
     titleProject: "Mi Huella",
     role: "Frontend Developer, Líder Técnico",
     company: "LabTecnoSocial",
@@ -32,20 +48,20 @@ export const experiences = [
     description:
       "Diseño y desarrollo de sitios web para clientes de diversas industrias, aplicando tecnologías modernas y buenas prácticas.",
   },
-  // {
-  //   titleProject: "Orientando un Futuro de Sueños - Freelance",
-  //   role: "Frontend Developer",
-  //   company: "Proyectos Independientes",
-  //   period: "2022 - 2023",
-  //   periodTotal: "1 año",
-  //   features: [
-  //     "Creación de sitios web personalizados con HTML, CSS y JavaScript.",
-  //     "Desarrollo de funcionalidades backend simples con Node.js y PHP.",
-  //     "Implementación de diseños responsivos para diversos dispositivos.",
-  //     "Optimización SEO básica para clientes.",
-  //     "Integración con plataformas como WordPress o correos personalizados.",
-  //   ],
-  //   description:
-  //     "Diseño y desarrollo de sitios web para clientes de diversas industrias, aplicando tecnologías modernas y buenas prácticas.",
-  // },
+
+  {
+    titleProject: "Orientando un Futuro de Sueños - Freelance",
+    role: "Frontend Developer",
+    company: "Proyectos Independientes",
+    period: "agosto 2023 - noviembre 2023",
+    periodTotal: "3 meses",
+    features: [
+      "Creación de sitios web personalizados con HTML, CSS y JavaScript.",
+      "Desarrollo de funcionalidades backend simples con Node.js.",
+      "Implementación de diseños responsivos para diversos dispositivos.",
+      "Optimización SEO básica para clientes.",
+    ],
+    description:
+      "Diseño y desarrollo de sitios web para estudiantes que necesitan una guía de universidades, carreras y opciones educativas.",
+  },
 ];
