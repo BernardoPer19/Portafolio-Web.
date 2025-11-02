@@ -1,11 +1,11 @@
 ---
-// importación
+// ExperienciaSection.astro
 import { experiences } from "../../data/experience";
 import ExperienceItem from "./ExperienceItem.astro";
 ---
 
 <section id="experience" class="py-20 sm:py-24 bg-dark-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
     <div class="animate-on-scroll">
       <div class="flex items-center gap-2 text-primary-400 mb-4">
         <div class="h-px w-10 sm:w-12 bg-primary-400"></div>
@@ -14,20 +14,125 @@ import ExperienceItem from "./ExperienceItem.astro";
         </span>
       </div>
 
-      <h2 class="text-xl sm:text-2xl md:text-4xl font-bold mb-12">
+      <h2 class="text-xl sm:text-2xl md:text-4xl font-bold mb-8">
         Mi <span class="text-primary-400">trayectoria</span> profesional
       </h2>
+
+      <!-- Filtros de categoría -->
+      <div class="mb-10">
+        <div class="flex flex-wrap gap-3 justify-start">
+          <button
+            data-filter="fullstack"
+            class="exp-filter-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 bg-primary-400 text-dark-100"
+          >
+            Full-Stack
+          </button>
+          <button
+            data-filter="automation"
+            class="exp-filter-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 bg-dark-100 text-zinc-300 border border-zinc-800 hover:border-primary-400 hover:text-primary-400"
+          >
+            IA + n8n
+          </button>
+          <button
+            data-filter="freelance"
+            class="exp-filter-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 bg-dark-100 text-zinc-300 border border-zinc-800 hover:border-primary-400 hover:text-primary-400"
+          >
+            Freelance
+          </button>
+        </div>
+
+        <!-- Contador de resultados -->
+        <div class="mt-3">
+          <p class="text-xs text-zinc-500 font-mono">
+            <span id="result-count" class="text-primary-400 font-semibold"></span> experiencias
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="relative">
-      <!-- Línea central solo en md+ -->
-      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-zinc-800"></div>
+    <!-- Grid de experiencias -->
+    <div id="experience-container" class="grid gap-6">
+      {experiences.map((exp, index) => (
+        <ExperienceItem exp={exp} index={index} />
+      ))}
+    </div>
 
-      <div class="space-y-16">
-        {experiences.map((exp, index) => (
-          <ExperienceItem exp={exp} index={index} />
-        ))}
+    <!-- Mensaje cuando no hay resultados -->
+    <div id="no-results" class="hidden text-center py-16">
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-dark-100 border border-zinc-800 mb-3">
+        <svg class="w-7 h-7 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
       </div>
+      <p class="text-zinc-400">No se encontraron experiencias en esta categoría</p>
     </div>
   </div>
 </section>
+
+<script>
+  const expSection = document.querySelector('#experience');
+  const filterBtns = expSection.querySelectorAll('.exp-filter-btn');
+  const experienceItems = expSection.querySelectorAll('[data-category]');
+  const container = expSection.querySelector('#experience-container');
+  const noResults = expSection.querySelector('#no-results');
+  const resultCount = expSection.querySelector('#result-count');
+
+  function updateCount(count) {
+    if (resultCount) resultCount.textContent = count.toString();
+  }
+
+  function filterExperiences(category) {
+    let visibleCount = 0;
+    experienceItems.forEach((item, index) => {
+      const itemCategory = item.getAttribute('data-category');
+      const shouldShow = itemCategory === category;
+
+      if (shouldShow) {
+        item.classList.remove('hidden');
+        setTimeout(() => item.classList.add('animate-fade-in'), index * 50);
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+        item.classList.remove('animate-fade-in');
+      }
+    });
+
+    if (visibleCount === 0) {
+      container.classList.add('hidden');
+      noResults.classList.remove('hidden');
+    } else {
+      container.classList.remove('hidden');
+      noResults.classList.add('hidden');
+    }
+
+    updateCount(visibleCount);
+  }
+
+  updateCount(experienceItems.length);
+  filterExperiences('fullstack');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary-400', 'text-dark-100');
+        b.classList.add('bg-dark-100', 'text-zinc-300', 'border', 'border-zinc-800');
+      });
+
+      btn.classList.remove('bg-dark-100', 'text-zinc-300', 'border', 'border-zinc-800');
+      btn.classList.add('bg-primary-400', 'text-dark-100');
+
+      if (filter) filterExperiences(filter);
+    });
+  });
+</script>
+
+<style>
+  .expfilter-btn {
+    cursor: pointer;
+  }
+  .exp-filter-btn:active {
+    transform: scale(0.96);
+  }
+</style>
